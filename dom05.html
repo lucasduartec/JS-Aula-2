@@ -11,15 +11,17 @@
     <ul></ul>
     <script>
       console.log("Hellow");
-      //Busca uma referências para todos os elementos
 
+      //Busca uma referências para todos os elementos
       const eUL = document.querySelector("ul");
 
       //Opera os dados
-
       for (let i = 0; i < 5; i++) {
         const numero = 7 + i;
-        eUL.innerHTML += `<li>${numero}</li>`;
+        const eLi = document.createElement("li");
+        eLi.textContent = numero;
+        console.dir(eLi);
+        eUL.appendChild(eLi);
       }
 
       //Escreve na saída
